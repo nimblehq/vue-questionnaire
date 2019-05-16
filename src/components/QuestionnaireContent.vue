@@ -1,7 +1,9 @@
 <template>
   <div>
-    <slot name="header"></slot>
-    <slot name="question"></slot>
+    <header>
+      <slot name="question"></slot>
+      <slot name="nextQuestionButton"></slot>
+    </header>
     <slot name="answer"></slot>
   </div>
 </template>
@@ -11,3 +13,11 @@ export default {
   name: 'QuestionnaireContent'
 }
 </script>
+
+<style lang="scss" scoped>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>
