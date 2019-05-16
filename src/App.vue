@@ -1,25 +1,29 @@
 <template>
-  <div class="container">
-    <Questionnaire />
-  </div>
+  <main class="container">
+    <Questionnaire/>
+  </main>
 </template>
 
 <script>
-import Questionnaire from './containers/Questionnaire.vue';
+  import Questionnaire from './containers/Questionnaire';
 
-export default {
-  name: 'app',
-  components: {
-    Questionnaire
+  export default {
+    name: 'app',
+    components: {
+      Questionnaire
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>
-.container {
-  width: calc(100% - 188px);
+  .container {
+    display: flex;
+    align-items: center;
 
-  margin-right: 94px;
-  margin-left: 94px;
-}
+    width: 1000px;
+    height: 100vh;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
 </style>

@@ -1,14 +1,31 @@
 <template>
   <section class="questionnaire">
-    <QuestionnaireHeader title="K10" submitButtonText="Continue" :enableSubmitButton="true" :onSubmit="submitHandler" />
+    <QuestionnaireHeader
+      title="K10"
+      submitButtonText="Continue"
+      :enableSubmitButton="true"
+      :onSubmit="submitHandler"
+    />
+
     <QuestionnaireContent>
+      <template v-slot:progressTitle>
+        <QuestionnaireProgressTitle :current="1" :total="10" />
+      </template>
+
       <template v-slot:question>
-        <QuestionnaireContentQuestion />
+        <QuestionnaireContentQuestion question="About how often did you feel tired out for no good reason?" />
       </template>
-      <template v-slot:nextQuestionButton>
-        <QuestionnaireContentStepButton :isShowNext="true" :isShowPrevious="true" :onNextQuestion="nextQuestionHandler" :onPreviousQuestion="backQuestionHandler" />
+
+      <template v-slot:questionStepButton>
+        <QuestionnaireStepButton
+          :isShowPrevious="true"
+          :isShowNext="true"
+          :onPreviousQuestion="previousQuestionHandler"
+          :onNextQuestion="nextQuestionHandler"
+        />
       </template>
-      <template v-slot:answer>
+
+      <template v-slot:answers>
         <QuestionnaireContentAnswer />
       </template>
     </QuestionnaireContent>
@@ -16,32 +33,39 @@
 </template>
 
 <script>
-import QuestionnaireHeader from '../components/QuestionnaireHeader.vue';
-import QuestionnaireContent from '../components/QuestionnaireContent.vue';
-import QuestionnaireContentQuestion from '../components/QuestionnaireContentQuestion.vue';
-import QuestionnaireContentStepButton from '../components/QuestionnaireContentStepButton.vue';
-import QuestionnaireContentAnswer from '../components/QuestionnaireContentAnswer.vue';
-import questions from '../data/questions.json';
+  import QuestionnaireContent from '../components/QuestionnaireContent';
+  import QuestionnaireContentAnswer from '../components/QuestionnaireContentAnswer';
+  import QuestionnaireContentQuestion from '../components/QuestionnaireContentQuestion';
+  import QuestionnaireHeader from '../components/QuestionnaireHeader';
+  import QuestionnaireProgressTitle from '../components/QuestionnaireProgressTitle';
+  import QuestionnaireStepButton from '../components/QuestionnaireStepButton';
 
-export default {
-  name: 'Questionnaire',
-  components: {
-    QuestionnaireHeader,
-    QuestionnaireContent,
-    QuestionnaireContentQuestion,
-    QuestionnaireContentStepButton,
-    QuestionnaireContentAnswer
-  },
-  methods: {
-    submitHandler() {
-      console.log('DISPATCH: SAVE_QUESTIONNAIRE');
+  export default {
+    name: 'Questionnaire',
+    components: {
+      QuestionnaireContent,
+      QuestionnaireContentAnswer,
+      QuestionnaireContentQuestion,
+      QuestionnaireHeader,
+      QuestionnaireProgressTitle,
+      QuestionnaireStepButton
     },
-    nextQuestionHandler() {
-      console.log('DISPATCH: NEXT_QUESTION')
-    },
-    backQuestionHandler() {
-      console.log('DISPATCH: BACK_QUESTION')
+    methods: {
+      nextQuestionHandler() {
+        window.console.log('DISPATCH: GO_TO_NEXT_QUESTION');
+      },
+      previousQuestionHandler() {
+        window.console.log('DISPATCH: GO_BACK_TO_PREVIOUS_QUESTION');
+      },
+      submitHandler() {
+        window.console.log('DISPATCH: SAVE_QUESTIONNAIRE');
+      }
     }
   }
-}
 </script>
+
+<style lang="scss" scoped>
+  .questionnaire {
+    width: 100%;
+  }
+</style>
