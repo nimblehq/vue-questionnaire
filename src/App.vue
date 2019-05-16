@@ -1,17 +1,25 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <QuestionnaireHeader title="K9" :onSubmit="submitHandler" submitButtonText="Continue" :enableSubmitButton="true" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import QuestionnaireHeader from './components/QuestionnaireHeader.vue'
+// import QuestionnaireContent from './components/QuestionnaireContent.vue'
+// import Question from './components/Questionnaire.vue'
+// import Answer from './components/Answer.vue'
+import questions from './data/questions.json'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    QuestionnaireHeader
+  },
+  methods: {
+    submitHandler() {
+      alert('DISPATCH SUBMIT')
+    }
   }
 }
 </script>

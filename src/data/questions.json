@@ -1,0 +1,634 @@
+{
+  "questions": [
+    {
+      "id": "11",
+      "text": "About how often did you feel tired out for no good reason?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 0,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "51",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "52",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "53",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "54",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "55",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "text": "About how often did you feel nervous?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 1,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "56",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "57",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "58",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "59",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "60",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "text": "About how often did you feel so nervous that nothing could calm you down?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 2,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "61",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "62",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "63",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "64",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "65",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "text": "About how often did you feel hopeless?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 3,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "66",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "67",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "68",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "69",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "70",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "text": "About how often did you feel restless or fidgety?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 4,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "71",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "72",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "73",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "74",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "75",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "text": "About how often did you feel so restless you could not sit still?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 5,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "76",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "77",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "78",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "79",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "80",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "text": "About how often did you feel depressed?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 6,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "81",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "82",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "83",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "84",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "85",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "text": "About how often did you feel that everything was an effort?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 7,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "86",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "87",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "88",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "89",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "90",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "text": "About how often did you feel so sad that nothing could cheer you up?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 8,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "91",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "92",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "93",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "94",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "95",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "text": "About how often did you feel worthless?",
+      "image_url": null,
+      "short_text": null,
+      "help_text": "In the PAST WEEK, how often have you been bothered by the above statement?",
+      "pick": "one",
+      "display_order": 9,
+      "display_type": "choice",
+      "question_group": null,
+      "answers": [
+        {
+          "id": "96",
+          "text": "None of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 0,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 1
+        },
+        {
+          "id": "97",
+          "text": "A little of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 1,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 2
+        },
+        {
+          "id": "98",
+          "text": "Some of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 2,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 3
+        },
+        {
+          "id": "99",
+          "text": "Most of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 3,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 4
+        },
+        {
+          "id": "100",
+          "text": "All of the time",
+          "short_text": null,
+          "help_text": null,
+          "display_order": 4,
+          "is_correct_answer": null,
+          "display_type": "answer",
+          "weight": 5
+        }
+      ]
+    }
+  ]
+}
