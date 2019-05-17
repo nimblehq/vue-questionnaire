@@ -14,7 +14,7 @@
 
 <script>
   export default {
-    name: 'QuestionnaireContent'
+    name: 'Content'
   }
 </script>
 

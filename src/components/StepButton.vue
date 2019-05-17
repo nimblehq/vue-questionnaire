@@ -24,7 +24,7 @@
   import Button from './Button'
 
   export default {
-    name: 'QuestionnaireStepButton',
+    name: 'StepButton',
     props: {
       isShowNext: Boolean,
       isShowPrevious: Boolean,

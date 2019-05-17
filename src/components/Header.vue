@@ -16,7 +16,7 @@
   import Button from './Button';
 
   export default {
-    name: 'QuestionnaireHeader',
+    name: 'Header',
     props: {
       enableSubmitButton: Boolean,
       onSubmit: Function,

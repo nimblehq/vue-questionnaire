@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'QuestionnaireProgressTitle',
+    name: 'ProgressTitle',
     props: {
       current: Number,
       total: Number

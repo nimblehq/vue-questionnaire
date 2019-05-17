@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'QuestionnaireContentQuestion',
+    name: 'ContentQuestion',
     props: {
       question: String
     }

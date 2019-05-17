@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    name: 'QuestionnaireContentAnswer',
+    name: 'ContentAnswer',
     props: {
       answers: Array,
       onAnswer: Function,

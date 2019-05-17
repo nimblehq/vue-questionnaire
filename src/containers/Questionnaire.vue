@@ -1,26 +1,26 @@
 <template>
   <section class="questionnaire">
-    <QuestionnaireHeader
+    <Header
       title="K10"
       submitButtonText="Continue"
       :enableSubmitButton="true"
       :onSubmit="submitHandler"
     />
 
-    <QuestionnaireContent>
+    <Content>
       <template v-slot:progressTitle>
-        <QuestionnaireProgressTitle
+        <ProgressTitle
           :current="currentQuestionIndex + 1"
           :total="totalQuestion"
         />
       </template>
 
       <template v-slot:question>
-        <QuestionnaireContentQuestion :question="question.text" />
+        <ContentQuestion :question="question.text" />
       </template>
 
       <template v-slot:questionStepButton>
-        <QuestionnaireStepButton
+        <StepButton
           :isShowPrevious="isShowPrevious()"
           :isShowNext="isShowNext()"
           :onPreviousQuestion="previousQuestionHandler"
@@ -29,25 +29,25 @@
       </template>
 
       <template v-slot:answers>
-        <QuestionnaireContentAnswer
+        <ContentAnswer
           :answers="question.answers"
           :onAnswer="answerHandler"
           :currentAnswer="responses[currentQuestionIndex]"
         />
       </template>
-    </QuestionnaireContent>
+    </Content>
   </section>
 </template>
 
 <script>
   import { mapState, mapGetters } from 'vuex';
 
-  import QuestionnaireContent from '../components/QuestionnaireContent';
-  import QuestionnaireContentAnswer from '../components/QuestionnaireContentAnswer';
-  import QuestionnaireContentQuestion from '../components/QuestionnaireContentQuestion';
-  import QuestionnaireHeader from '../components/QuestionnaireHeader';
-  import QuestionnaireProgressTitle from '../components/QuestionnaireProgressTitle';
-  import QuestionnaireStepButton from '../components/QuestionnaireStepButton';
+  import Content from '../components/Content';
+  import ContentAnswer from '../components/ContentAnswer';
+  import ContentQuestion from '../components/ContentQuestion';
+  import Header from '../components/Header';
+  import ProgressTitle from '../components/ProgressTitle';
+  import StepButton from '../components/StepButton';
 
   export default {
     name: 'Questionnaire',
@@ -63,12 +63,12 @@
       })
     },
     components: {
-      QuestionnaireContent,
-      QuestionnaireContentAnswer,
-      QuestionnaireContentQuestion,
-      QuestionnaireHeader,
-      QuestionnaireProgressTitle,
-      QuestionnaireStepButton
+      Content,
+      ContentAnswer,
+      ContentQuestion,
+      Header,
+      ProgressTitle,
+      StepButton
     },
     methods: {
       nextQuestionHandler() {
