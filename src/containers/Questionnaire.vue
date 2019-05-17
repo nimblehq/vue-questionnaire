@@ -18,8 +18,8 @@
 
       <template v-slot:questionStepButton>
         <QuestionnaireStepButton
-          :isShowPrevious="true"
-          :isShowNext="true"
+          :isShowPrevious="isShowPrevious()"
+          :isShowNext="isShowNext()"
           :onPreviousQuestion="previousQuestionHandler"
           :onNextQuestion="nextQuestionHandler"
         />
@@ -55,7 +55,8 @@
       }),
       ...mapGetters('questionnaire', {
         question: 'getCurrentQuestion',
-        totalQuestion: 'getQuestionsLength'
+        totalQuestion: 'getQuestionsLength',
+        isLastQuestion: 'isLastQuestion',
       })
     },
     components: {
@@ -83,6 +84,12 @@
           answerId
         })
         this.$store.dispatch('questionnaire/nextQuestion')
+      },
+      isShowNext() {
+        return this.responses[this.currentQuestionIndex] && !this.isLastQuestion
+      },
+      isShowPrevious() {
+        return this.currentQuestionIndex !== 0
       }
     }
   }

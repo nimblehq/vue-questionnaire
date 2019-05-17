@@ -1,6 +1,6 @@
 export default {
-  questionIndexIncrement (state, length) {
-    if (state.currentQuestionIndex < length - 1 ) {
+  questionIndexIncrement (state, isLastQuestion) {
+    if (!isLastQuestion) {
       ++state.currentQuestionIndex
     }
 

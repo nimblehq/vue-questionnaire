@@ -1,6 +1,6 @@
 export default {
   nextQuestion ({ commit, getters }) {
-    commit('questionIndexIncrement', getters.getQuestionsLength)
+    commit('questionIndexIncrement', getters.isLastQuestion)
   },
   previousQuestion ({ commit }) {
     commit('questionIndexDecrement')
