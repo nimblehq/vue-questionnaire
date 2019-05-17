@@ -1,8 +1,13 @@
 export default {
-  questionIndexIncrement (state) {
-    ++state.currentQuestionIndex
+  questionIndexIncrement (state, length) {
+    if (state.currentQuestionIndex < length - 1 ) {
+      ++state.currentQuestionIndex
+    }
+
   },
   questionIndexDecrement (state) {
-    --state.currentQuestionIndex
+    if (state.currentQuestionIndex > 0 ) {
+      --state.currentQuestionIndex
+    }
   }
 }

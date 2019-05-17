@@ -9,7 +9,7 @@
 
     <QuestionnaireContent>
       <template v-slot:progressTitle>
-        <QuestionnaireProgressTitle :current="1" :total="10" />
+        <QuestionnaireProgressTitle :current="currentQuestionIndex + 1" :total="totalQuestion" />
       </template>
 
       <template v-slot:question>
@@ -26,7 +26,7 @@
       </template>
 
       <template v-slot:answers>
-        <QuestionnaireContentAnswer :answers="answers" :onAnswer="answerHandler" />
+        <QuestionnaireContentAnswer :answers="question.answers" :onAnswer="answerHandler" />
       </template>
     </QuestionnaireContent>
   </section>
@@ -45,34 +45,14 @@
   export default {
     name: 'Questionnaire',
     computed: {
-      ...mapGetters({
-        question: 'questionnaire/getCurrentQuestion'
+      ...mapState('questionnaire', {
+        currentQuestionIndex: 'currentQuestionIndex'
+      }),
+      ...mapGetters('questionnaire', {
+        question: 'getCurrentQuestion',
+        totalQuestion: 'getQuestionsLength'
       })
     },
-    data: () => ({
-      answers: [
-        {
-          id: 1,
-          text: 'None of the time'
-        },
-        {
-          id: 2,
-          text: 'A little of time'
-        },
-        {
-          id: 3,
-          text: 'Same of the time'
-        },
-        {
-          id: 4,
-          text: 'Most of the time'
-        },
-        {
-          id: 5,
-          text: 'All of the time'
-        }
-      ]
-    }),
     components: {
       QuestionnaireContent,
       QuestionnaireContentAnswer,
@@ -92,6 +72,7 @@
         window.console.log('DISPATCH: SAVE_QUESTIONNAIRE');
       },
       answerHandler(answerId) {
+        this.$store.dispatch('questionnaire/nextQuestion')
         window.console.log(`DISPATCH: ANSWER_ID_${answerId}_QUESTIONNAIRE`)
       }
     }

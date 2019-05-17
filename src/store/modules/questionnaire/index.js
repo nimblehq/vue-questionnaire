@@ -8,7 +8,8 @@ const state = {
 }
 
 const getters = {
-  getCurrentQuestion: (state) => state.questions[state.currentQuestionIndex]
+  getCurrentQuestion: (state) => state.questions[state.currentQuestionIndex],
+  getQuestionsLength: (state) => state.questions.length
 }
 
 export default {
