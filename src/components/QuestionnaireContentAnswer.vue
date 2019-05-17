@@ -1,10 +1,21 @@
 <template>
   <ul class="questionnaire-content-answer">
-    <li v-for="(answer, index) in answers" v-bind:key="answer.id">
-      <label>
-        <input type='radio' name="answer" :value="answer.id" @click="onAnswer(answer.id)" hidden />
-        <div class="indicator">{{ String.fromCharCode(97 + index) }}</div>
-        <div class="description">{{ answer.text }}</div>
+    <li v-for="(answer, index) in answers" :key="answer.id" class="questionnaire-content-answer__choice">
+      <label class="questionnaire-content-answer__label">
+        <input
+          type="radio"
+          class="questionnaire-content-answer__control"
+          name="answer"
+          :value="answer.id"
+          @click="onAnswer(answer.id)"
+          hidden
+        />
+        <span class="questionnaire-content-answer__indicator">
+          {{ indicator(index) }}
+        </span>
+        <span class="questionnaire-content-answer__text">
+          {{ answer.text }}
+        </span>
       </label>
     </li>
   </ul>
@@ -16,40 +27,61 @@
     props: {
       answers: Array,
       onAnswer: Function
+    },
+    methods: {
+      indicator(index) {
+        return String.fromCharCode(97 + index);
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
   .questionnaire-content-answer {
-    font-family: Verdana, Geneva, sans-serif;
     padding-left: 26px;
-  }
+    font-family: Verdana, Geneva, sans-serif;
 
-  .questionnaire-content-answer label {
-    cursor: pointer;
+    &__choice {
+      border-bottom: 1px solid #d3dfe0;
 
-    .indicator {
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    &__label {
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+    }
+
+    &__indicator {
       display: inline-flex;
       justify-content: center;
       align-items: center;
 
       width: 32px;
       height: 32px;
+
       border-radius: 50%;
       border: solid 1px #d3dfe0;
 
       font-size: 12px;
+
+      input:checked + & {
+        border-color: #ff1966;
+        color: #fff;
+        background-color: #ff1966;
+      }
     }
 
-    .description {
-      display: inline;
-    }
-
-    input:checked + .indicator {
-      background-color: #ff1966;
-      border-color: #ff1966;
-      color: #fff;
+    &__text {
+      display: inline-flex;
+      margin-left: 20px;
     }
   }
 </style>
