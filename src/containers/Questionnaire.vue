@@ -87,7 +87,9 @@
           answerId
         });
 
-        this.$store.dispatch('questionnaire/nextQuestion');
+        setTimeout(() => {
+          this.$store.dispatch('questionnaire/nextQuestion');
+        }, 400);
       },
       isShowNext() {
         return this.responses[this.currentQuestionIndex] && !this.isLastQuestion;
