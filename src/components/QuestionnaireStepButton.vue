@@ -40,9 +40,10 @@
 <style lang="scss" scoped>
   .questionnaire-step-button {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     width: 320px;
+    height: 65px;
 
     &__back {
       border: 0;

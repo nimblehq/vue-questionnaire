@@ -1,8 +1,10 @@
 <template>
   <div class="questionnaire-content">
     <header class="questionnaire-content__header">
-      <slot name="progressTitle"></slot>
-      <slot name="question"></slot>
+      <div class="questionnaire-content__wrapper">
+        <slot name="progressTitle"></slot>
+        <slot name="question"></slot>
+      </div>
       <slot name="questionStepButton"></slot>
     </header>
 
@@ -29,12 +31,14 @@
 
     &__header {
       display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-content: space-between;
+      justify-content: space-between;
+      align-items: center;
 
-      height: 65px;
       padding: 26px 26px 16px 26px;
+    }
+
+    &__wrapper {
+      flex: 0 1 calc(100% - 320px);
     }
   }
 </style>
