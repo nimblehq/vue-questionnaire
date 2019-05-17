@@ -9,7 +9,10 @@
 
     <QuestionnaireContent>
       <template v-slot:progressTitle>
-        <QuestionnaireProgressTitle :current="currentQuestionIndex + 1" :total="totalQuestion" />
+        <QuestionnaireProgressTitle
+          :current="currentQuestionIndex + 1"
+          :total="totalQuestion"
+        />
       </template>
 
       <template v-slot:question>
@@ -37,7 +40,7 @@
 </template>
 
 <script>
-  import { mapState, mapGetters } from 'vuex'
+  import { mapState, mapGetters } from 'vuex';
 
   import QuestionnaireContent from '../components/QuestionnaireContent';
   import QuestionnaireContentAnswer from '../components/QuestionnaireContentAnswer';
@@ -69,10 +72,10 @@
     },
     methods: {
       nextQuestionHandler() {
-        this.$store.dispatch('questionnaire/nextQuestion')
+        this.$store.dispatch('questionnaire/nextQuestion');
       },
       previousQuestionHandler() {
-        this.$store.dispatch('questionnaire/previousQuestion')
+        this.$store.dispatch('questionnaire/previousQuestion');
       },
       submitHandler() {
         window.console.log('DISPATCH: ', this.responses);
@@ -82,14 +85,15 @@
           currentQuestionIndex: this.currentQuestionIndex,
           questionId: this.question.id,
           answerId
-        })
-        this.$store.dispatch('questionnaire/nextQuestion')
+        });
+
+        this.$store.dispatch('questionnaire/nextQuestion');
       },
       isShowNext() {
-        return this.responses[this.currentQuestionIndex] && !this.isLastQuestion
+        return this.responses[this.currentQuestionIndex] && !this.isLastQuestion;
       },
       isShowPrevious() {
-        return this.currentQuestionIndex !== 0
+        return this.currentQuestionIndex !== 0;
       }
     }
   }

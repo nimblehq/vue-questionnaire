@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <Questionnaire/>
+    <Questionnaire />
   </main>
 </template>
 

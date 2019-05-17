@@ -36,9 +36,10 @@
       },
       isChecked(answerId) {
         if (this.currentAnswer) {
-          return this.currentAnswer.answerId === answerId
+          return this.currentAnswer.answerId === answerId;
         }
-        return false
+
+        return false;
       }
     }
   }
