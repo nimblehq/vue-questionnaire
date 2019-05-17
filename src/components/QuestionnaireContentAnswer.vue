@@ -7,6 +7,7 @@
           class="questionnaire-content-answer__control"
           name="answer"
           :value="answer.id"
+          :checked="isChecked(answer.id)"
           @click="onAnswer(answer.id)"
           hidden
         />
@@ -26,11 +27,18 @@
     name: 'QuestionnaireContentAnswer',
     props: {
       answers: Array,
-      onAnswer: Function
+      onAnswer: Function,
+      currentAnswer: Object
     },
     methods: {
       indicator(index) {
         return String.fromCharCode(97 + index);
+      },
+      isChecked(answerId) {
+        if (this.currentAnswer) {
+          return this.currentAnswer.answerId === answerId
+        }
+        return false
       }
     }
   }

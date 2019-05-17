@@ -9,5 +9,8 @@ export default {
     if (state.currentQuestionIndex > 0 ) {
       --state.currentQuestionIndex
     }
+  },
+  addUserResponse (state, { currentQuestionIndex, questionId, answerId }) {
+    state.responses[currentQuestionIndex] = { questionId, answerId }
   }
 }

@@ -4,7 +4,8 @@ import questions from '../../../data/questions'
 
 const state = {
   currentQuestionIndex: 0,
-  questions: questions.questions
+  questions: questions.questions,
+  responses: {}
 }
 
 const getters = {

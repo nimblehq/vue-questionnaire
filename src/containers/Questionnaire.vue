@@ -26,7 +26,11 @@
       </template>
 
       <template v-slot:answers>
-        <QuestionnaireContentAnswer :answers="question.answers" :onAnswer="answerHandler" />
+        <QuestionnaireContentAnswer
+          :answers="question.answers"
+          :onAnswer="answerHandler"
+          :currentAnswer="responses[currentQuestionIndex]"
+        />
       </template>
     </QuestionnaireContent>
   </section>
@@ -46,7 +50,8 @@
     name: 'Questionnaire',
     computed: {
       ...mapState('questionnaire', {
-        currentQuestionIndex: 'currentQuestionIndex'
+        currentQuestionIndex: 'currentQuestionIndex',
+        responses: 'responses'
       }),
       ...mapGetters('questionnaire', {
         question: 'getCurrentQuestion',
@@ -69,11 +74,15 @@
         this.$store.dispatch('questionnaire/previousQuestion')
       },
       submitHandler() {
-        window.console.log('DISPATCH: SAVE_QUESTIONNAIRE');
+        window.console.log('DISPATCH: ', this.responses);
       },
       answerHandler(answerId) {
+        this.$store.dispatch('questionnaire/answerQuestion', {
+          currentQuestionIndex: this.currentQuestionIndex,
+          questionId: this.question.id,
+          answerId
+        })
         this.$store.dispatch('questionnaire/nextQuestion')
-        window.console.log(`DISPATCH: ANSWER_ID_${answerId}_QUESTIONNAIRE`)
       }
     }
   }
