@@ -13,7 +13,7 @@
       </template>
 
       <template v-slot:question>
-        <QuestionnaireContentQuestion question="About how often did you feel tired out for no good reason?" />
+        <QuestionnaireContentQuestion :question="question.text" />
       </template>
 
       <template v-slot:questionStepButton>
@@ -33,6 +33,8 @@
 </template>
 
 <script>
+  import { mapState, mapGetters } from 'vuex'
+
   import QuestionnaireContent from '../components/QuestionnaireContent';
   import QuestionnaireContentAnswer from '../components/QuestionnaireContentAnswer';
   import QuestionnaireContentQuestion from '../components/QuestionnaireContentQuestion';
@@ -42,6 +44,11 @@
 
   export default {
     name: 'Questionnaire',
+    computed: {
+      ...mapGetters({
+        question: 'questionnaire/getCurrentQuestion'
+      })
+    },
     data: () => ({
       answers: [
         {
@@ -76,10 +83,10 @@
     },
     methods: {
       nextQuestionHandler() {
-        window.console.log('DISPATCH: GO_TO_NEXT_QUESTION');
+        this.$store.dispatch('questionnaire/nextQuestion')
       },
       previousQuestionHandler() {
-        window.console.log('DISPATCH: GO_BACK_TO_PREVIOUS_QUESTION');
+        this.$store.dispatch('questionnaire/previousQuestion')
       },
       submitHandler() {
         window.console.log('DISPATCH: SAVE_QUESTIONNAIRE');
