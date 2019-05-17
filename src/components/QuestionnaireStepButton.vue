@@ -51,6 +51,12 @@
       color: #11cbd9;
 
       background-color: transparent;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
     }
 
     &__next {

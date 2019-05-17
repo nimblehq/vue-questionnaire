@@ -7,12 +7,7 @@
     <title>vue-questionnaire</title>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-
-    <style>
-      body {
-        background-color: #fdfdfd;
-      }
-    </style>
+    <link rel="stylesheet" href="<%= BASE_URL %>assets/stylesheets/application.css">
   </head>
   <body>
     <noscript>
@@ -21,6 +16,29 @@
         Please enable it to continue.
       </strong>
     </noscript>
+
+    <header class="app-header">
+      <div class="app-header__container">
+        <a href="/" class="app-header__logo">Braive</a>
+        <ul class="navigation">
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">About</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">Programs</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">Articles</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">FAQs</a>
+          </li>
+          <li class="navigation__item">
+            <a href="/" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
     <div id="app"></div>
   </body>
