@@ -1,0 +1,76 @@
+body {
+  background-color: #fdfdfd;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100px;
+
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+
+.app-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1000px;
+  height: 100%;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.app-header__logo {
+  width: 131px;
+  height: 42px;
+
+  color: transparent;
+
+  background-image: url("https://staging.braive.com/assets/shared/logo-6d44794809a4b4763458ea0fbeeda064c2915f40e52eed49bc059144bc66d90a.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 131px 42px;
+}
+
+.navigation {
+  display: flex;
+  justify-items: flex-end;
+  align-items: center;
+}
+
+.navigation__item {
+  margin-left: 6.4px;
+}
+
+.navigation__item:first-child {
+  margin-left: 0;
+}
+
+.navigation__link {
+  display: block;
+
+  height: 20px;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  color: #2e3a3f;
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+  color: #11cbd9;
+}
